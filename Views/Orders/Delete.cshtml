@@ -1,0 +1,93 @@
+﻿@model MicrobiologyLab.Models.Order
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Order</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.product_name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.product_name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.supervisor_name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.supervisor_name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.project_name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.project_name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.quantity)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.quantity)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.code)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.code)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.unit_price)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.unit_price)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.funding_duration)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.funding_duration)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.refrigerationOrNot)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.refrigerationOrNot)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.specifity_notes)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.specifity_notes)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.expiry_date)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.expiry_date)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.company)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.company.Comp_Id)
+        </dd class>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.user)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.user.UserId)
+        </dd class>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="ol_id" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

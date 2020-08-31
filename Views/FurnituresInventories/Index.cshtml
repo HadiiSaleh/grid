@@ -1,0 +1,101 @@
+﻿@model IEnumerable<MicrobiologyLab.Models.FurnituresInventory>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.furniture_name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.quantity_micro)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.quantity_mol)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.quantity_cell)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.quantity_myco)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.quantity_storage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.quantity_refrig)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.quantity_meeting)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.total)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.user)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.incomingProduct)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.requiredMaterial)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.furniture_name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.quantity_micro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.quantity_mol)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.quantity_cell)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.quantity_myco)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.quantity_storage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.quantity_refrig)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.quantity_meeting)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.total)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.user.UserId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.incomingProduct.additionnalNotes)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.requiredMaterial.name1)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.fid">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.fid">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.fid">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

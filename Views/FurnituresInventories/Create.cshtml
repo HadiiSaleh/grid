@@ -1,0 +1,85 @@
+﻿@model MicrobiologyLab.Models.FurnituresInventory
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>FurnituresInventory</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="furniture_name" class="control-label"></label>
+                <input asp-for="furniture_name" class="form-control" />
+                <span asp-validation-for="furniture_name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="quantity_micro" class="control-label"></label>
+                <input asp-for="quantity_micro" class="form-control" />
+                <span asp-validation-for="quantity_micro" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="quantity_mol" class="control-label"></label>
+                <input asp-for="quantity_mol" class="form-control" />
+                <span asp-validation-for="quantity_mol" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="quantity_cell" class="control-label"></label>
+                <input asp-for="quantity_cell" class="form-control" />
+                <span asp-validation-for="quantity_cell" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="quantity_myco" class="control-label"></label>
+                <input asp-for="quantity_myco" class="form-control" />
+                <span asp-validation-for="quantity_myco" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="quantity_storage" class="control-label"></label>
+                <input asp-for="quantity_storage" class="form-control" />
+                <span asp-validation-for="quantity_storage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="quantity_refrig" class="control-label"></label>
+                <input asp-for="quantity_refrig" class="form-control" />
+                <span asp-validation-for="quantity_refrig" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="quantity_meeting" class="control-label"></label>
+                <input asp-for="quantity_meeting" class="form-control" />
+                <span asp-validation-for="quantity_meeting" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="total" class="control-label"></label>
+                <input asp-for="total" class="form-control" />
+                <span asp-validation-for="total" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="id" class="control-label"></label>
+                <select asp-for="id" class ="form-control" asp-items="ViewBag.id"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="pr_id" class="control-label"></label>
+                <select asp-for="pr_id" class ="form-control" asp-items="ViewBag.pr_id"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="reqmat_id" class="control-label"></label>
+                <select asp-for="reqmat_id" class ="form-control" asp-items="ViewBag.reqmat_id"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

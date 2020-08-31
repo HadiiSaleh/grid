@@ -1,0 +1,36 @@
+﻿@model MicrobiologyLab.Models.PrintingPermission
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>PrintingPermission</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.page_number)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.page_number)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.coloredOrNot)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.coloredOrNot)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.user)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.user.UserId)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.printing_id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
